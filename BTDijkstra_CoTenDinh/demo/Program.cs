@@ -28,7 +28,16 @@ namespace demo
             if (kq == null)
                 Console.WriteLine("Khong co duong di");
             else
-                Console.WriteLine(string.Join(" --> ", kq));
+            {
+                string chuoiKQ = "";
+
+                for (int i = 0; i < kq.Count - 1; ++i)
+                    chuoiKQ += kq[i] + " -- (" + kq[++i] + ") --> ";
+
+                chuoiKQ += kq[kq.Count - 1];
+
+                Console.WriteLine(chuoiKQ);
+            }
         }
     }
 }

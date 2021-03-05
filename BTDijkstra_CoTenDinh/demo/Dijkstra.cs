@@ -26,6 +26,7 @@ class Dijkstra
 
         return vertex;
     }
+
     enum LoaiXe
     {
         xemay,
@@ -33,7 +34,7 @@ class Dijkstra
         ca2
     }
 
-    private (int[] dd, string[] tenDD) dijkstra(int uBD, int phuongTien)
+    private (int[] pre, string[] preDuong) dijkstra(int uBD, int phuongTien)
     {
         int[] dist = Enumerable.Repeat(int.MaxValue, g.n).ToArray();
         int[] pre = Enumerable.Repeat(-1, g.n).ToArray();
@@ -103,7 +104,7 @@ class Dijkstra
 
         path.Add(vertexName[uKT]);
 
-        while (pre[uKT] != -1 && preDuong[uKT] != "-1")
+        while (pre[uKT] != -1)
         {
             int vertexFirst = pre[uKT];
             path.Add(preDuong[uKT]);

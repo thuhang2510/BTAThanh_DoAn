@@ -1,9 +1,0 @@
-8
-2 1 11 2 7 78 1 Kieu_Ky 
-2 0 11 2 2 23 0 Xuan_Thuy
-2 1 23 0 3 102 2 Bao_Dap
-3 2 102 2 5 55 2 7 54 1 Ngoc_Dong
-1 2 107 0 Thon_Thuong 
-2 3 55 2 6 54 2 Thon_Vang
-2 5 44 2 7 15 2 Khu_Do_Thi_Ecopark
-5 0 78 1 6 15 2 3 54 1 4 55 2 1 69 2 Da_Ton

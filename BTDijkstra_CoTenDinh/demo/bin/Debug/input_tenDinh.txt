@@ -1,0 +1,9 @@
+8
+0 Phu_Tho
+1 Hung_Yen
+2 Gia_Lai
+3 Ha_Noi
+4 Hai_Phong
+5 Quang_Ninh
+6 Lao_Cai
+7 Yen_Bai

@@ -1,0 +1,9 @@
+8
+-1		duong5		CatLinh		DaiLa		-1 		TruongDinh	-1		GiaiPhong
+duong5		-1		-1		NguyenTrai	-1		ThuongDinh	-1		NgoTuDo
+CatLinh		-1		-1		Ngo123		HoangVanThai	-1		-1		CT
+DaiLa		NguyenTrai	Ngo123		-1		-1		VanYen		VanKhe		-1
+-1		-1		HoangVanThai	-1		-1		DT206		NgaTuSo		-1
+TruongDinh	ThuongDinh	-1		VanYen		DT206		-1		D1		-1
+-1		-1		-1		VanKhe		NgaTuSo		D1		-1		Duong338
+GiaiPhong	NgoTuDo		CT		-1		-1		-1		Duong338	-1
