@@ -26,11 +26,18 @@ class Dijkstra
 
         return vertex;
     }
+    enum LoaiXe
+    {
+        xemay,
+        oto,
+        ca2
+    }
 
-    private int[] dijkstra(int uBD, int phuongTien)
+    private (int[] dd, string[] tenDD) dijkstra(int uBD, int phuongTien)
     {
         int[] dist = Enumerable.Repeat(int.MaxValue, g.n).ToArray();
         int[] pre = Enumerable.Repeat(-1, g.n).ToArray();
+        string[] preDuong = Enumerable.Repeat("-1", g.n).ToArray();
         bool[] visited = new bool[g.n];
 
         dist[uBD] = 0;
@@ -46,7 +53,7 @@ class Dijkstra
 
             for (int v = 0; v < g.n; ++v)
             {
-                if (visited[v] == false && g[u, v].weight > 0 && (g[u, v].vehicle == phuongTien || g[u, v].vehicle == 2))
+                if (visited[v] == false && g[u, v].weight > 0 && (g[u, v].vehicle == phuongTien || g[u, v].vehicle == (int)LoaiXe.ca2))
                 {
                     int alt = dist[u] + g[u, v].weight;
 
@@ -54,12 +61,13 @@ class Dijkstra
                     {
                         dist[v] = alt;
                         pre[v] = u;
+                        preDuong[v] = g[u, v].nameRoad;
                     }
                 }
             }
         }
 
-        return pre;
+        return (pre, preDuong);
     }
 
     private (int uBD, int uKT) layDiemBD_KT(string vertexStart, string vertexEnd)
@@ -86,7 +94,7 @@ class Dijkstra
         if (uBD == -1 || uKT == -1)
             return null;
 
-        int[] pre = dijkstra(uBD, vehicle);
+        (int[] pre, string[] preDuong) = dijkstra(uBD, vehicle);
 
         if (pre[uKT] == -1)
             return null;
@@ -95,9 +103,10 @@ class Dijkstra
 
         path.Add(vertexName[uKT]);
 
-        while (pre[uKT] != -1)
+        while (pre[uKT] != -1 && preDuong[uKT] != "-1")
         {
             int vertexFirst = pre[uKT];
+            path.Add(preDuong[uKT]);
             path.Add(vertexName[vertexFirst]);
             uKT = vertexFirst;
         }
