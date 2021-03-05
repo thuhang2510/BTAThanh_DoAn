@@ -4,32 +4,51 @@ using System.IO;
 
 class FileIO
 {
-    public Input docFile(string fileName)
+    private List<string[]> thu(string[] fileName)
+    {
+        List<string[]> hihi = new List<string[]>();
+
+        for (int i = 0; i < fileName.Length; ++i)
+            hihi.Add(File.ReadAllLines(fileName[i]));
+
+        return hihi;
+    }
+
+    private List<string[]> tach(List<string[]> hihi, int k)
     {
         char[] sep = new char[] { ' ', '\t' };
 
-        string[] lines = File.ReadAllLines(fileName);
+        List<string[]> cc = new List<string[]>();
 
-        int n = int.Parse(lines[0]);
+        for (int i = 0; i < hihi.Count; ++i)
+            cc.Add(hihi[i][k].Trim().Split(sep, System.StringSplitOptions.RemoveEmptyEntries));
+
+        return cc;
+    }
+
+    public Input docFile(string[] fileName)
+    {
+        List<string[]> hihi = thu(fileName);
+
+        int n = int.Parse(hihi[0][0]);
 
         List<string> vertexName = new List<string>();
         Graph g = new Graph(n);
 
-        for (int i = 1; i < lines.Length; ++i)
+        for (int i = 1; i < hihi[0].Length; ++i)
         {
-            string[] content = lines[i].Trim().Split(sep, System.StringSplitOptions.RemoveEmptyEntries);
-            int N = int.Parse(content[0]);
+            List<string[]> t = tach(hihi, i);
 
-            for (int j = 0; j < N; ++j)
+            for (int j = 0; j < n; ++j)
             {
-                int v = int.Parse(content[j * 3 + 1]);
-                int weight = int.Parse(content[j * 3 + 2]);
-                int vehicle = int.Parse(content[j * 3 + 3]);
+                int weight = int.Parse(t[0][j]);
+                int vehicle = int.Parse(t[2][j]);
+                string nameRoad = t[1][j];
 
-                g[i - 1, v] = new Road(weight, vehicle);
+                g[i - 1, j] = new Road(weight, vehicle, nameRoad);
             }
 
-            vertexName.Add(content[3 * N + 1]);
+            vertexName.Add(t[3][1]);
         }
 
         Input input = new Input(vertexName, g);
