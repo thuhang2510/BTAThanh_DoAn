@@ -4,11 +4,23 @@ class Road
 {
     public int weight;
     public int vehicle;
+    public string nameRoad;
 
-    public Road(int weight, int vehicle)
+    public Road()
+    {
+
+    }
+
+    public Road(int weight, int vehicle, string nameRoad)
     {
         this.weight = weight;
         this.vehicle = vehicle;
+        this.nameRoad = nameRoad;
+    }
+
+    public int getWeight()
+    {
+        return weight;
     }
 }
 
@@ -21,10 +33,6 @@ class Graph
     {
         this.n = n;
         a = new Road[n, n];
-
-        for (int i = 0; i < n; ++i)
-            for (int j = 0; j < n; ++j)
-                a[i, j] = new Road(-1, -1);
     }
 
     public Road this[int u, int v]
