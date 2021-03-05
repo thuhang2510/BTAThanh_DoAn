@@ -6,21 +6,11 @@ class Road
     public int vehicle;
     public string nameRoad;
 
-    public Road()
-    {
-
-    }
-
     public Road(int weight, int vehicle, string nameRoad)
     {
         this.weight = weight;
         this.vehicle = vehicle;
         this.nameRoad = nameRoad;
-    }
-
-    public int getWeight()
-    {
-        return weight;
     }
 }
 
