@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 
 class FileIO
@@ -8,8 +7,8 @@ class FileIO
     {
         List<string[]> fileList = new List<string[]>();
 
-        for (int i = 0; i < fileName.Length; ++i)
-            fileList.Add(File.ReadAllLines(fileName[i]));
+        foreach (string name in fileName)
+            fileList.Add(File.ReadAllLines(name));
 
         return fileList;
     }
@@ -20,10 +19,25 @@ class FileIO
 
         List<string[]> listStr = new List<string[]>();
 
-        for (int i = 0; i < fileList.Count; ++i)
-            listStr.Add(fileList[i][line].Trim().Split(sep, System.StringSplitOptions.RemoveEmptyEntries));
+        foreach (string[] str in fileList)
+            listStr.Add(str[line].Trim().Split(sep, System.StringSplitOptions.RemoveEmptyEntries));
 
         return listStr;
+    }
+
+    private (int weight, int vehicle, string nameRoad) getValue(List<string[]> fileList, int vt)
+    {
+        List<string> arrValue = new List<string>();
+
+        for (int i = 0; i < fileList.Count - 1; ++i)
+            arrValue.Add(giatri(fileList[i], vt));
+
+        return (int.Parse(arrValue[0]), int.Parse(arrValue[2]), arrValue[1]);
+    }
+
+    private string giatri(string[] list, int vt)
+    {
+        return list[vt];
     }
 
     public Input docFile(string[] fileName)
@@ -41,14 +55,12 @@ class FileIO
 
             for (int j = 0; j < n; ++j)
             {
-                int weight = int.Parse(listStr[0][j]);
-                int vehicle = int.Parse(listStr[2][j]);
-                string nameRoad = listStr[1][j];
+                (int weight, int vehicle, string nameRoad) = getValue(listStr, j);
 
                 g[i - 1, j] = new Road(weight, vehicle, nameRoad);
             }
 
-            vertexName.Add(listStr[3][1]);
+            vertexName.Add(giatri(listStr[3], 1));
         }
 
         Input input = new Input(vertexName, g);
