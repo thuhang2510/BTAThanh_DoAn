@@ -1,0 +1,12 @@
+xét hàm FileIO.readFileList
+vòng lặp for là kém
+vì việc xử lý không quan tâm đến index của phần tử
+hàm splitListStr tương tự và tất cả trường hợp tương tự khác đều sửa lại cho anh
+Thành đã gửi Hôm qua lúc 14:35
+int weight = int.Parse(listStr[0][j]);
+                int vehicle = int.Parse(listStr[2][j]);
+                string nameRoad = listStr[1][j];
+nhìn đoạn code này mà anh thấy em cực khổ ghê ha
+em làm sao mà đơn giản hóa lại toàn bộ cho anh đi
+chứ thiết kế code như vầy thì coi chừng bị sếp chửi vì code ngu
+nhìn vào còn thấy tệ hơn cả bài nộp trước
