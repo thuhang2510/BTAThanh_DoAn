@@ -18,8 +18,7 @@ namespace demo
         static void Main(string[] args)
         {
             FileIO fileIO = new FileIO();
-            string[] tenFile = { "input_trongso.txt", "input_tenduongdi.txt", "input_loaixe.txt", "input_tenDinh.txt" };
-            Input input = fileIO.docFile(tenFile);
+            Input input = fileIO.docFile();
 
             Dijkstra dijkstra = new Dijkstra(input.g, input.vertexName);
 
