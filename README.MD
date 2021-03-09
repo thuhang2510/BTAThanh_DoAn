@@ -12,9 +12,10 @@ Mỗi đoạn đường có một độ dài xác định, đoạn đường s�
 
 
 Để đặt một chuyến xe, người sử dụng app MyGrab sẽ thực hiện các bước sau:
-Bước 1. Nhập vào tên địa điểm bắt đầu.
-Bước 2. Nhập vào tên địa điểm kết thúc.
-Bước 3. Chọn loại xe di chuyển (chọn xe Moto hoặc Car).
+<br>
+Bước 1. Nhập vào tên địa điểm bắt đầu.<br>
+Bước 2. Nhập vào tên địa điểm kết thúc.<br>
+Bước 3. Chọn loại xe di chuyển (chọn xe Moto hoặc Car).<br>
 Bước 4. App hiển thị lộ trình di chuyển với ĐƯỜNG ĐI NGẮN NHẤT VÀ HỢP LỆ.
 
 Ví dụ. Người sử dụng chọn di chuyển bằng Car.
