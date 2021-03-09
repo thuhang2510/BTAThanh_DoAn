@@ -10,3 +10,22 @@ nhìn đoạn code này mà anh thấy em cực khổ ghê ha
 em làm sao mà đơn giản hóa lại toàn bộ cho anh đi
 chứ thiết kế code như vầy thì coi chừng bị sếp chửi vì code ngu
 nhìn vào còn thấy tệ hơn cả bài nộp trước
+
+cái cốt lõi cấu trúc chưa ổn thì ko sửa, vì nó mà code em trở nên ngu
+thế mà em lại tìm cách xoay sở bằng những hàm như vầy
+học đến giờ phút này, em nên mang tư tưởng CLEAN CODE > CODE NGẮN TIỆN LỢI
+clean code nghĩa là code sạch đẹp, rõ ràng, dễ kiểm soát
+vì đây là đồ án nên anh khó mà gợi ý cho em được
+gợi ý thì nó ko còn là bài làm của em nữa
+mà thật ra anh có gợi ý rồi mà em đâu có nghe anh
+
+file đầu tiên lưu theo dạng ma trận kề
+mục đích là mô tả khoảng cách giữa 2 cặp đỉnh
+file tiếp theo lưu tên mỗi đỉnh, mỗi dòng gồm có 1 số nguyên + 1 khoảng trắng + tên đỉnh
+file tiếp theo lưu tên đường đi, cấu trúc ko nói
+đọc mỗi file là mỗi hàm riêng, ko có gộp chung
+gộp chung làm gì để cho nó ngu thêm
+còn nếu em vẫn muốn giữ nguyên cấu trúc của em, ko muốn thay đổi
+thì phải sửa lại cho code nó thông minh hơn
+ví dụ cái mảng của em lúc nào cũng lưu 3 phần tử
+vậy thì dẹp mảng đó đi, chuyển nó thành 3 tham số cho dễ nhìn hơn
