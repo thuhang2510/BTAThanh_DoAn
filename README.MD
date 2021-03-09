@@ -1,6 +1,6 @@
 # ĐỒ ÁN
 
-_Dịch vụ đặt xe công nghệ MyGrab sắp triển khai tại Việt Nam.
+Dịch vụ đặt xe công nghệ MyGrab sắp triển khai tại Việt Nam.
 Họ dự kiến hỗ trợ hai loại xe là Moto và Car.
 
 Mỗi đoạn đường có một độ dài xác định, đoạn đường sẽ kết nối 2 địa điểm với nhau.
@@ -19,7 +19,7 @@ Bước 4. App hiển thị lộ trình di chuyển với ĐƯỜNG ĐI NGẮN N
 
 Ví dụ. Người sử dụng chọn di chuyển bằng Car.
 Lộ trình kết quả có đi qua đường Lê Duẩn. Tuy nhiên đường Lê Duẩn chỉ chấp nhận xe Moto.
-==> Lộ trình kết quả là không hợp lệ._
+==> Lộ trình kết quả là không hợp lệ.
 
 ---
 
